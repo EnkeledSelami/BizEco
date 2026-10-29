@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080a09"><title>BizEco — Business, Simplified.</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+<div id="welcome-root" hidden></div>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#overview"><span class="brand-logo-window"><img src="assets/bizeco-logo.png" alt="BizEco — Business Simplified"></span></a>
+    <div class="business-switch"><span class="business-avatar">N</span><span><b id="business-name">Northstar Retail</b><small>Demo workspace</small></span><span class="chevron">⌄</span></div>
+    <nav id="navigation" aria-label="Main navigation">
+      <div class="nav-label">WORKSPACE</div>
+      <button class="nav-item active" data-page="overview"><span>◫</span>Overview</button>
+      <button class="nav-item" data-page="analytics"><span>⌁</span>Analytics</button>
+      <button class="nav-item" data-page="sales"><span>↗</span>Sales</button>
+      <button class="nav-item" data-page="customers"><span>♙</span>Customers</button>
+      <button class="nav-item" data-page="products"><span>▦</span>Products &amp; inventory</button>
+      <button class="nav-item" data-page="expenses"><span>↘</span>Expenses</button>
+      <button class="nav-item" data-page="cashflow"><span>⇄</span>Cash flow</button>
+      <button class="nav-item" data-page="marketing"><span>◉</span>Marketing</button>
+      <div class="nav-label nav-label-spaced">OPERATIONS</div>
+      <button class="nav-item" data-page="automations"><span>⚡</span>Automations</button>
+      <button class="nav-item" data-page="reports"><span>▤</span>Reports</button>
+      <button class="nav-item" data-page="advisor"><span>✳</span>AI business advisor</button>
+      <div class="nav-label nav-label-spaced">MANAGE</div>
+      <button class="nav-item" data-page="team"><span>♧</span>Team &amp; permissions</button>
+      <button class="nav-item" data-page="integrations"><span>⛓</span>Integrations</button>
+      <button class="nav-item" data-page="settings"><span>⚙</span>Settings</button>
+    </nav>
+    <div class="sidebar-foot"><span class="online-dot"></span><span>Local demo workspace</span><button id="help-button" aria-label="About BizEco">?</button></div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar"><button id="mobile-menu" class="icon-button mobile-menu" aria-label="Open navigation">☰</button><div class="crumb">My workspace <span>/</span> <b id="crumb-title">Overview</b></div><div class="top-actions"><span class="demo-pill"><i></i> DEMO DATA</span><select id="date-filter" class="date-button" aria-label="Filter dashboard date range"><option>Last 7 days</option><option selected>Last 30 days</option><option>This month</option><option>This quarter</option><option>This year</option></select><button id="notifications" class="icon-button" aria-label="Notifications">♧<em></em></button><button class="profile-button" id="profile-button">K</button></div></header>
+    <section id="content" class="content" aria-live="polite"></section>
+  </main>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<div id="modal-root"></div>
+</body>
+</html>
+
